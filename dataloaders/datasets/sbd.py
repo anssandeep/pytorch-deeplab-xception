@@ -49,6 +49,7 @@ class SBDSegmentation(data.Dataset):
             for line in lines:
                 _image = os.path.join(self._image_dir, line + ".jpg")
                 _categ= os.path.join(self._cat_dir, line + ".mat")
+                print(_image, _categ)
                 assert os.path.isfile(_image)
                 assert os.path.isfile(_categ)
                 self.im_ids.append(line)

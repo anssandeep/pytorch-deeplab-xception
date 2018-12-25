@@ -163,3 +163,22 @@ class FixedResize(object):
 
         return {'image': img,
                 'label': mask}
+
+def clip(img, dtype, maxval):
+    return np.clip(img, 0, maxval).astype(dtype)
+
+class RandomBrightness(object):
+    def __init__(self, limit=0.1, prob=0.5):
+        self.limit = limit
+        self.prob = prob
+
+    def __call__(self, sample):
+        img = np.array(sample['image'])
+        mask = sample['label']
+        if random.random() < self.prob:
+            alpha = 1.0 + self.limit * random.uniform(-1, 1)
+            maxval = np.max(img[..., :3])
+            dtype = img.dtype
+            img[..., :3] = clip(alpha * img[..., :3], dtype, maxval)
+        return {'image': img,
+                'label': mask}

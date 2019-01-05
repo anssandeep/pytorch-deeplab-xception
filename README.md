@@ -13,9 +13,7 @@
 
 | Backbone  | train/eval os  |mIoU in val |Pretrained Model|
 | :-------- | :------------: |:---------: |:--------------:|
-| ResNet    | 16/16          | 78.43%     | [google drive](https://drive.google.com/open?id=1NwcwlWqA-0HqAPk3dSNNPipGMF0iS0Zu) |
-| MobileNet | 16/16          | 70.81%     | [google drive](https://drive.google.com/open?id=1G9mWafUAj09P4KvGSRVzIsV_U5OqFLdt) |
-| DRN       | 16/16          | 78.87%     | [google drive](https://drive.google.com/open?id=131gZN_dKEXO79NknIQazPJ-4UmRrZAfI) |
+| ResNet    | 16/16          | 78.01%     | [google drive](https://drive.google.com/open?id=1OAzyU1bT8Vc-7ucX88R55zPOmAZTh6B8) |
 
 
 
